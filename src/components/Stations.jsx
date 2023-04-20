@@ -17,7 +17,7 @@ function Stations() {
           <div className="flex flex-col">
             <div className="flex items-center border border-red-400 rounded-md w-64">
               <div className="bg-red-400 text-white px-4">{item.id}</div>
-              <div className="my-1 text-xs text-gray-600 pl-1">
+              <div className="my-1 text-sm text-gray-600 pl-1">
                 {item.stationName}
               </div>
             </div>
@@ -27,7 +27,7 @@ function Stations() {
               <div className="flex items-center gap-x-1 h-4 w-64 overflow-x-scroll scroll-hidden">
                 <div className="bg-[#1581C4] text-white flex rounded-md px-1 gap-x-1 items-center">
                   {item.arriving.map((num, ind) => (
-                    <span key={ind} className="text-xs flex gap-x-1">
+                    <span key={ind} className="text-sm flex gap-x-1">
                       <span className="">{num}</span>
                       <span>{ind + 1 === item.arriving.length ? "" : "|"}</span>
                     </span>
@@ -35,7 +35,7 @@ function Stations() {
                 </div>
                 <div className="bg-slate-500 text-white flex rounded-md px-1 gap-x-1 items-center">
                   {item.arriving.map((num, ind) => (
-                    <span key={ind} className="text-xs flex gap-x-1">
+                    <span key={ind} className="text-sm flex gap-x-1">
                       <span className="">{num}</span>
                       <span>{ind + 1 === item.arriving.length ? "" : "|"}</span>
                     </span>
