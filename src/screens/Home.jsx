@@ -9,7 +9,6 @@ function Home() {
     <>
       <NavBar />
       <Map />
-      <Stations />
     </>
   );
 }
