@@ -8,7 +8,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 function Stations() {
   return (
-    <div className="absolute top-[420px] -z-10 overflow-auto h-56 w-full">
+    <div className="h-z-10 w-full h-[300px] overflow-scroll">
       {busData.map((item) => (
         <div key={item.id} className="flex p-2 border-b-[1px] border-black">
           <div className="flex flex-col">
@@ -24,7 +24,7 @@ function Stations() {
               <div className="flex items-center gap-x-1 h-4 w-64 overflow-x-scroll scroll-hidden">
                 <div className="bg-[#1581C4] text-white flex rounded-md px-1 gap-x-1 items-center">
                   {item.arriving.map((num, ind) => (
-                    <span className="text-xs flex gap-x-1">
+                    <span key={ind} className="text-xs flex gap-x-1">
                       <span className="">{num}</span>
                       <span>{ind + 1 === item.arriving.length ? "" : "|"}</span>
                     </span>
@@ -32,20 +32,13 @@ function Stations() {
                 </div>
                 <div className="bg-slate-500 text-white flex rounded-md px-1 gap-x-1 items-center">
                   {item.arriving.map((num, ind) => (
-                    <span className="text-xs flex gap-x-1">
+                    <span key={ind} className="text-xs flex gap-x-1">
                       <span className="">{num}</span>
                       <span>{ind + 1 === item.arriving.length ? "" : "|"}</span>
                     </span>
                   ))}
                 </div>
               </div>
-              {/* <div className="bg-slate-400 h-4 px-1 flex items-center gap-x-1 text-white rounded-md">
-                {item.toBeScheduled.map((num, ind) => (
-                  <span className="">
-                    {num} {ind + 1 === item.arriving.length ? "" : "|"}
-                  </span>
-                ))}
-              </div> */}
             </div>
           </div>
           <div></div>
