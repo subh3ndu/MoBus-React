@@ -24,7 +24,7 @@ function Stations() {
 
             <div className="flex items-center mt-1">
               <DirectionsBusIcon color="primary" />
-              <div className="flex items-center gap-x-1 h-4 w-56 overflow-x-scroll scroll-hidden">
+              <div className="flex items-center gap-x-1 h-4 w-64 overflow-x-scroll scroll-hidden">
                 <div className="bg-[#1581C4] text-white flex rounded-md px-1 gap-x-1 items-center">
                   {item.arriving.map((num, ind) => (
                     <span key={ind} className="text-xs flex gap-x-1">
@@ -42,7 +42,7 @@ function Stations() {
                   ))}
                 </div>
               </div>
-              <div className="text-[12px] text-gray-500">
+              <div className="text-[12px] text-gray-500 flex items-baseline">
                 {item.timeToReach} min away
                 <DirectionsWalkIcon size="medium" />
               </div>
