@@ -10,7 +10,10 @@ function Stations() {
   return (
     <div className="h-z-10 w-full h-[300px] overflow-scroll">
       {busData.map((item) => (
-        <div key={item.id} className="flex p-2 border-b-[1px] border-black">
+        <div
+          key={item.id}
+          className="flex items-center p-1 border-b-[1px] border-black"
+        >
           <div className="flex flex-col">
             <div className="flex items-center border border-red-400 rounded-md w-64">
               <div className="bg-red-400 text-white px-4">{item.id}</div>
@@ -21,7 +24,7 @@ function Stations() {
 
             <div className="flex items-center mt-1">
               <DirectionsBusIcon color="primary" />
-              <div className="flex items-center gap-x-1 h-4 w-64 overflow-x-scroll scroll-hidden">
+              <div className="flex items-center gap-x-1 h-4 w-56 overflow-x-scroll scroll-hidden">
                 <div className="bg-[#1581C4] text-white flex rounded-md px-1 gap-x-1 items-center">
                   {item.arriving.map((num, ind) => (
                     <span key={ind} className="text-xs flex gap-x-1">
@@ -39,9 +42,15 @@ function Stations() {
                   ))}
                 </div>
               </div>
+              <div className="text-[12px] text-gray-500">
+                {item.timeToReach} min away
+                <DirectionsWalkIcon />
+              </div>
             </div>
           </div>
-          <div></div>
+          <div>
+            <ChevronRightIcon color="primary" />
+          </div>
         </div>
       ))}
     </div>
