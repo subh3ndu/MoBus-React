@@ -8,7 +8,7 @@ import SearchIcon from "@mui/icons-material/Search";
 
 function Home() {
   return (
-    <div className="bg-[#1581C4] flex items-center w-full h-20">
+    <div className="bg-[#1581C4] flex items-center w-full h-16">
       {/* Menu Icon */}
       <IconButton size="small">
         <MenuIcon className="text-white" />

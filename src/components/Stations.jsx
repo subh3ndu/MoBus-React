@@ -12,7 +12,7 @@ function Stations() {
       {busData.map((item) => (
         <div
           key={item.id}
-          className="flex items-center p-1 border-b-[1px] border-black"
+          className="flex items-center p-1 border-b-[1px] border-black justify-between"
         >
           <div className="flex flex-col">
             <div className="flex items-center border border-red-400 rounded-md w-64">
@@ -44,7 +44,7 @@ function Stations() {
               </div>
               <div className="text-[12px] text-gray-500">
                 {item.timeToReach} min away
-                <DirectionsWalkIcon />
+                <DirectionsWalkIcon size="medium" />
               </div>
             </div>
           </div>
